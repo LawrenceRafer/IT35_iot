@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IoT Greenhouse Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Greenhouse Ventilation Control</h1>
+<p>Admin Dashboard</p>
+
+<button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Sensor Monitoring</h2>
+<p>Temperature: <span class="value" id="temp">30</span> °C</p>
+<p>Humidity: <span class="value" id="humidity">65</span> %</p>
+</div>
+
+<div class="card">
+<h2>Ventilation Control</h2>
+<p>Fan Status: <span class="value" id="fanStatus">OFF</span></p>
+
+<button class="on" onclick="turnOnFan()">Turn ON Fan</button>
+<button class="off" onclick="turnOffFan()">Turn OFF Fan</button>
+
+<p class="status" id="message"></p>
+</div>
+
+<div class="card">
+<h2>System Logs</h2>
+
+<table>
+<thead>
+<tr>
+<th>Date & Time</th>
+<th>Temperature</th>
+<th>Humidity</th>
+<th>Fan Status</th>
+</tr>
+</thead>
+
+<tbody id="logTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
