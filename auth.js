@@ -17,7 +17,7 @@ function login() {
     if (username === correctUser && password === correctPass) {
 
         localStorage.setItem("loggedIn", "true");
-        window.location.href = "dashboard.html";
+        window.location.href = "index.html";
 
     } else {
 
