@@ -12,9 +12,10 @@ function turnOffFan() {
     updateFan();
 }
 
-// Update fan status and log data
 function updateFan() {
+
     document.getElementById("fanStatus").innerText = fanStatus;
+
     document.getElementById("message").innerText =
         "Ventilation is " + (fanStatus === "ON" ? "running" : "stopped");
 
@@ -23,6 +24,7 @@ function updateFan() {
 
 // Add log entry
 function addLog() {
+
     const temp = document.getElementById("temp").innerText;
     const humidity = document.getElementById("humidity").innerText;
     const time = new Date().toLocaleString();
@@ -36,11 +38,13 @@ function addLog() {
     row.insertCell(3).innerText = fanStatus;
 }
 
-// Fake sensor data (demo purpose)
+// Fake sensor data
 setInterval(() => {
+
     document.getElementById("temp").innerText =
         Math.floor(Math.random() * 5) + 28;
 
     document.getElementById("humidity").innerText =
         Math.floor(Math.random() * 10) + 60;
+
 }, 3000);
