@@ -1,5 +1,5 @@
 // check login status
-if (window.location.pathname.includes("dashboard.html")) {
+if (window.location.pathname.includes("index.html")) {
     if (localStorage.getItem("loggedIn") !== "true") {
         window.location.href = "login.html";
     }
